@@ -1,13 +1,28 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { TypeAnimation } from "react-type-animation";
 
 const Header = () => {
   return (
-    <section>
+    <section className="lg:py-16">
       <div className="grid grid-cols-1 lg:grid-cols-12">
         <div className="col-span-7 place-self-center text-center sm:text-left">
           <h1 className="text-white mb-4 text-4xl lg:text-6xl font-extrabold">
-            Hi, I am Emil
+            Hi, I am{" "}
+            <TypeAnimation
+              sequence={[
+                "Emil",
+                1000,
+                "a Web Developer",
+                1000,
+                "a Mobile Developer",
+                1000,
+              ]}
+              wrapper="span"
+              speed={20}
+              repeat={Infinity}
+            />
           </h1>
           <p className="text-[#adb7be] text-base sm:text-lg lg:text-xl mb-6 ">
             This is a description
